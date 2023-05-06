@@ -68,12 +68,6 @@ _cloudinary.default.v2.config({
   secure: true
 });
 
-app.use("/", (req, res) => {
-  return res.json({
-    msg: 'success'
-  });
-}); // config swagger
-
 app.use("/api-docs", _swaggerUiExpress.default.serve);
 app.get("/api-docs", _swaggerUiExpress.default.setup(_swagger.default)); // routes
 
